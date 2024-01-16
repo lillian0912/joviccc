@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JoviCheng.Insurance Broker</title>
+
+    <style>
+         .outlined-text {
+        font-size: 24px;
+        color: rgb(15, 15, 15);
+        text-shadow: 2px 0 0 rgb(229, 229, 229), 0 2px 0 rgb(229, 229, 229), -1px 0 0 rgb(229, 229, 229), 0 -1px 0 rgb(229, 229, 229);
+        font-family: "HGｺﾞｼｯｸE", sans-serif; /* 更改字體 */
+        text-align: center; /* 將文字水平置中 */
+  
+      }
+    
+
+    </style>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <!-- Import Bootstrap CSS (you can adjust the URL to match your Bootstrap version) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Your existing Vue template goes here -->
+      <div class="nav-bar"></div>
+
+      
+
+      <div class="product-display">
+        <div class="container">
+          <div class="row">
+            <!-- 左邊內容 -->
+            <div class="col-sm-3">
+              <h1></h1>
+             
+              <img v-bind:src="questionpeople">
+              <img v-bind:src="moneytree">
+            
+             
+
+                <h2 class="outlined-text">
+                  您是否擔心退休金被疾病或意外侵蝕掉!
+                  進而影響您退休的規劃？
+                </h2><br />
+
+                <h2 class="outlined-text"> 您是否正在為有限的預算該如何適當配置到
+                  「風險管理」、「理財規劃」 <br />而傷透腦筋？</h2><br />             
+                
+                  <img class="zoomable-image" v-bind:src="DM">
+
+              <!-- ... -->
+            </div>
+            <div class="col-sm-1">
+            </div>
+            <!-- 中間內容 -->
+            <div class="col-sm-7">
+            
+              
+              
+              <h1>Jovi</h1>
+              <div class="product-info">
+              <!--  <h1>{{ product }}</h1>-->
+                
+                <p></p>
+                
+                <hr />
+
+                <h3>◆ 認證財務顧問師</h3>
+                <h4>(RFC, Registered Financial Consultant)</h4>
+                <h3>◆ 國際認證高級理財規劃顧問</h3>
+                <h4>(CFP®、CERTIFIED FINANCIALPLANNER®)</h4>
+                <hr />
+                
+
+
+                <img style="width: 15%;"v-bind:src="brain"><p>Jovi 已取得以上雙重資格認證</p>
+                <p>有能力及熱忱與您一起討論這些重要議題並擬定出好的對策!</p>
+                          
+      
+                <img style="width: 15%;" v-bind:src="mail">
+                <p>【與Jovi聯繫】</p>
+                <p>jovi.cc.cheng@gmail.com</p>
+                
+                <!--  url
+                <a :href="url">click here to see more information about our materials</a>
+                -->
+                
+               
+               
+                <!--add details-->
+                <ul>
+                <!--  
+                  <li v-for="detail in details">{{ detail }}</li>
+                -->
+                </ul>
+                <br />
+                
+         
+              </div>
+
+              <hr />
+              <!-- ... -->
+            </div>
+             <!-- 右邊內容 -->
+             <div class="col-sm-1">
+
+            <!-- button -->
+            <br />
+            <button class="button" @click="navigateToRFC">什麼是RFC？</button>
+            <button class="button" @click="navigateToCFP">什麼是CFP？</button>
+            <!-- button -->
+
+  
+            <!-- ... -->
+            </div>
+           
+            <div class="footer">
+              <p>Jovi Cheng_Insurance Broker</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app');
+    </script>
+  </body>
+</html>
